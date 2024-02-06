@@ -1,0 +1,36 @@
+/* Personnalisation des Medias queries */
+@media (min-width:992px) {
+    .page-header .entry-title,
+    .site-footer .footer-inner,
+    .site-footer:not(.dynamic-footer),
+    .site-header .header-inner,
+    .site-header:not(.dynamic-header),
+    body:not([class*=elementor-page-]) .site-main {
+        max-width:100%
+    }
+
+    .site-footer.footer-full-width,
+    .site-header.header-full-width {
+        max-width:100%
+    }
+}
+
+@media (min-width:1200px) {
+    .page-header .entry-title,
+    .site-footer .footer-inner,
+    .site-footer:not(.dynamic-footer),
+    .site-header .header-inner,
+    .site-header:not(.dynamic-header),
+    body:not([class*=elementor-page-]) .site-main {
+        max-width:100%
+    }
+
+    .site-footer.footer-full-width,
+    .site-header.header-full-width {
+        max-width:100%
+    }
+}
+    
+.site-header+.elementor {
+    min-height:calc(100vh - 320px)
+}

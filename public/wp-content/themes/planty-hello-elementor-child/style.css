@@ -1,0 +1,349 @@
+/*
+Theme Name: Planty
+Theme URI:  https://www.planty.com
+Author:     oc-kami
+Author URI: https://www.planty.com
+Template:   hello-elementor
+Version:    1.0
+License:    GNU General Public License v2 or later
+*/
+
+/* Import de la font Syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+body * {
+   font-family: 'Syne', sans-serif;
+}
+
+/* HEADER */
+#site-header {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 0rem;
+  padding-block-end: 0rem;
+  position: relative;
+}
+
+/* Logo */
+div.show:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
+  padding-left: 37px;
+  width: 201px;
+  height: 19px;
+}
+
+.custom-logo-link img:hover {
+	opacity: 0.8;
+}
+
+.menu a:hover {
+  font-weight: 700;
+}
+
+/* Lien 'Nous rencontrer' */
+/* LOGIN */
+.header-inner > nav:nth-child(2) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1) {
+  padding: 30px 0px;
+}
+
+/* LOGOFF */
+#menu-item-19 a {
+  padding: 30px 30px;
+}
+
+/* Lien 'Admin' */
+.header-inner > nav:nth-child(2) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1) {
+  padding: 30px 30px;
+}
+
+/* Lien 'Commande' */
+#menu-item-21 a {
+  background-color: #DC9F96;
+  color: white;
+  font-weight: 700;
+  padding: 30px 61px;
+}
+
+#menu-item-21 a:hover {
+  background-color: var(--e-global-color-2b02dd7);
+}
+
+/* Personnalisation couleur police du menu pour tablette et mobile */
+.site-navigation-dropdown > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1),
+.site-navigation-dropdown > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1) {
+  color: black;
+}
+
+/* FOOTER */
+/* #site-footer {
+  padding-block-start: 0rem;
+  padding-block-end: 0rem;
+  position: relative;
+} */
+
+
+/* Responsive menu */
+@media (max-width: 992px) {
+  #menu-item-19 a,
+  #menu-item-20 a,
+  #menu-item-21 a {
+    padding: 15px 15px;
+  }
+
+  #menu-item-19 a,
+  #menu-item-20 a,
+  #menu-item-19 a:visited,
+  #menu-item-20 a:visited {
+    background-color: white;
+  } 
+}
+
+/* --- PAGE :
+"Nous contacter" | Personnalisation du formulaire de contact */
+.wpcf7-form {
+  width: 383px;
+  position: relative;
+}
+
+/* Label */
+.wpcf7-form > p:nth-child(2),
+.wpcf7-form > p:nth-child(3),
+.wpcf7-form > p:nth-child(4) {
+  margin-bottom: 22px;
+}
+
+/* Champs de saisie */
+.wpcf7-form > p:nth-child(2) > label:nth-child(1) > span:nth-child(2) > input:nth-child(1),
+.wpcf7-form > p:nth-child(3) > label:nth-child(1) > span:nth-child(2) > input:nth-child(1),
+textarea.wpcf7-form-control {
+  width: 100%;
+  border-radius: 7px;
+  padding: .5rem 1rem;
+  transition: all .3s;
+  border: none;
+  margin-top: 13px;
+}
+
+.wpcf7-form > p:nth-child(2) > label:nth-child(1) > span:nth-child(2) > input:nth-child(1),
+.wpcf7-form > p:nth-child(3) > label:nth-child(1) > span:nth-child(2) > input:nth-child(1) {
+  height: 71px;
+  width: 383px;
+}
+
+/* .wpcf7-form > p:nth-child(4) > label:nth-child(1) {
+  position: relative;
+} */
+
+textarea.wpcf7-form-control {
+  height: 237px;
+  width: 383px;
+  resize: none; 
+  /* "resize: none;" pour être conforme à la maquette */
+}
+
+/* Bouton 'Envoyer' */
+#wpcf7-f89-p11-o1 > form > p:nth-child(5) {
+  display: flex;
+  justify-content: center;
+}
+
+#wpcf7-f89-p11-o1 > form > p:nth-child(5) > input {
+  display: flex;
+  justify-content: center;
+  background-color: #E0B9B4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 60px;
+}
+
+#wpcf7-f89-p11-o1 > form > p:nth-child(5) > input:hover {
+  background-color: var(--e-global-color-2b02dd7);
+}
+
+/* Élement masqué pour bien centrer le bouton */
+#wpcf7-f89-p11-o1 > form > p:nth-child(5) > span {
+  display: none;
+}
+
+/* Image décorative du formulaire */
+.img-custom-form { 
+  position: absolute;
+  bottom: 0px;
+  left: -95px;
+  z-index: -1;
+}
+
+/* Image canette */
+body > div > div.elementor-element.elementor-element-c769478.e-con-full.e-flex.e-con.e-parent > div.elementor-element.elementor-element-798d29c.e-con-full.group-8.e-flex.e-con.e-child > div > div > img {
+  width: 100%;
+}
+
+
+/* --- PAGE :
+ "Commander" | Personnalisation du formulaire */
+ .wpcf7-form {
+  width: auto ;
+ }
+
+/* Barre de séparation */
+hr {
+  color: white;
+  height: 447px;
+}
+.commande {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.col-com {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(1) > h3,
+.fraise {
+  background-color: transparent;
+  background-image: url(/wp-content/uploads/2024/01/jeremy-bezanger-0QgbyZdhX7k-unsplash-1.png);
+  background-position: center;
+  background-size: cover;
+  font-family: "Syne", Sans-serif;
+  font-size: 20px;
+  font-weight: var( --e-global-typography-primary-font-weight );
+  color: #ffffff;
+  padding: 1em;
+  text-align:center;
+  width: 193px;
+  height: 128px;
+}
+
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(2) > h3,
+.pamplemousse {
+  background-color: transparent;
+  background-image: url(/wp-content/uploads/2024/01/estudio-bloom-tOitjphtIXU-unsplash-1.png);
+  background-position: center;
+  background-size: cover;
+  font-family: "Syne", Sans-serif;
+  font-size: 20px;
+  font-weight: var( --e-global-typography-primary-font-weight );
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+  width: 193px;
+  height: 128px;
+}
+
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(3) > h3,
+.framboise {
+  background-color: transparent;
+  background-image: url(/wp-content/uploads/2024/01/rodion-kutsaev-4k8xEFW4_3Q-unsplash-1.png);
+  background-position: center;
+  background-size: cover;
+  font-family: "Syne", Sans-serif;
+  font-size: 20px;
+  font-weight: var( --e-global-typography-primary-font-weight );
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+  width: 193px;
+  height: 128px;
+}
+
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(4) > h3,
+.citron {
+  background-color: transparent;
+  background-image: url(/wp-content/uploads/2024/01/estudio-bloom-ezqnxsqUZ80-unsplash-1.png);
+  background-position: center;
+  background-size: cover;
+  font-family: "Syne", Sans-serif;
+  font-size: 20px;
+  font-weight: var( --e-global-typography-primary-font-weight );
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+  width: 193px;
+  height: 128px;
+}
+
+/* Mise en forme de <p> pour les sélecteurs de quantité */
+.wpcf7-form > p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  margin: 0px auto; 
+}
+
+/* Sélecteurs de quantité */
+label.commande:nth-child(1) > span:nth-child(1) > input:nth-child(1),
+label.commande:nth-child(3) > span:nth-child(1) > input:nth-child(1),
+label.commande:nth-child(5) > span:nth-child(1) > input:nth-child(1),
+label.commande:nth-child(7) > span:nth-child(1) > input:nth-child(1) {
+  width: 80px;
+  height: 56px;
+}
+
+.vertical-separator {
+  border: none;
+  border-left: 1px solid white;
+  height: 370px;
+}
+
+.col1 > p:nth-child(2),
+.col2 > p:nth-child(2) {
+  margin-bottom: 25px;
+}
+
+
+/* Labels */
+.col1 > p:nth-child(2) > label:nth-child(1),
+.col1 > p:nth-child(2) > label:nth-child(3),
+.col1 > p:nth-child(2) > label:nth-child(5),
+.col2 > p:nth-child(2) > label:nth-child(1),
+.col2 > p:nth-child(2) > label:nth-child(3),
+.col2 > p:nth-child(2) > label:nth-child(5) {
+  height: 71px;
+  width: 383px;
+  line-height: 1.5;
+}
+
+/* Personnalisation de style du message dès envoi */
+.col1 > p:nth-child(2) > label:nth-child(5) > span:nth-child(1) > span:nth-child(2),
+.col1 > p:nth-child(2) > label:nth-child(1) > span:nth-child(1) > span:nth-child(2),
+.col1 > p:nth-child(2) > label:nth-child(3) > span:nth-child(1) > span:nth-child(2),
+#wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(1) > span > span,
+#wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(3) > span > span,
+.col2 > p:nth-child(2) > label:nth-child(5) > span:nth-child(1) > span:nth-child(2) {
+  font-family: var( --e-global-typography-text-family ), Sans-serif;
+  font-size: var( --e-global-typography-text-font-size );
+  font-weight: normal;
+  color: var(--e-global-color-2b02dd7);
+  text-shadow: #000 1px 1px 5px;
+}
+
+/* Bouton envoyé */
+.wpcf7-submit {
+  display: flex;
+  justify-content: center;
+  background-color: #E0B9B4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 60px;
+}
+
+/* Spinner masqué pour bon affichage du bouton 'Envoyer' */
+.wpcf7-spinner {
+  display: none;
+}
+
+@media (max-width:806px) {
+
+  .wpcf7-form {
+    margin: auto;
+  }
+
+  .vertical-separator {
+    display: none;
+  }
+}
