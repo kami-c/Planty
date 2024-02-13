@@ -4,6 +4,7 @@ Theme URI:  https://www.planty.com
 Author:     oc-kami
 Author URI: https://www.planty.com
 Template:   hello-elementor
+Text Domain: planty
 Version:    1.0
 License:    GNU General Public License v2 or later
 */
@@ -73,14 +74,6 @@ div.show:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
   color: black;
 }
 
-/* FOOTER */
-/* #site-footer {
-  padding-block-start: 0rem;
-  padding-block-end: 0rem;
-  position: relative;
-} */
-
-
 /* Responsive menu */
 @media (max-width: 992px) {
   #menu-item-19 a,
@@ -102,6 +95,15 @@ div.show:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
 .wpcf7-form {
   width: 383px;
   position: relative;
+}
+
+#wpcf7-f89-p11-o1 > form > p:nth-child(2),
+#wpcf7-f89-p11-o1 > form > p:nth-child(3),
+#wpcf7-f89-p11-o1 > form > p:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  margin: 10px auto; 
 }
 
 /* Label */
@@ -128,10 +130,6 @@ textarea.wpcf7-form-control {
   height: 71px;
   width: 383px;
 }
-
-/* .wpcf7-form > p:nth-child(4) > label:nth-child(1) {
-  position: relative;
-} */
 
 textarea.wpcf7-form-control {
   height: 237px;
@@ -165,12 +163,23 @@ textarea.wpcf7-form-control {
   display: none;
 }
 
+#wpcf7-f89-p11-o1 > form > p:nth-child(6) {
+  position: relative;
+}
+
 /* Image décorative du formulaire */
 .img-custom-form { 
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: -95px;
   z-index: -1;
+}
+
+/* Style du message d'erreur après envoi */
+#wpcf7-f89-p11-o1 > form > div.wpcf7-response-output {
+  margin: auto;
+  padding: 0.2em 1em;
+  text-align: center;
 }
 
 /* Image canette */
@@ -181,8 +190,9 @@ body > div > div.elementor-element.elementor-element-c769478.e-con-full.e-flex.e
 
 /* --- PAGE :
  "Commander" | Personnalisation du formulaire */
- .wpcf7-form {
+ #wpcf7-f772-p13-o1 > form {
   width: auto ;
+  margin-bottom: 40px;
  }
 
 /* Barre de séparation */
@@ -190,16 +200,21 @@ hr {
   color: white;
   height: 447px;
 }
+
 .commande {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 .col-com {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  flex-direction: row;
+  align-content: center;
+  gap: 20px;
 }
 
 #wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(1) > h3,
@@ -212,7 +227,7 @@ hr {
   font-size: 20px;
   font-weight: var( --e-global-typography-primary-font-weight );
   color: #ffffff;
-  padding: 1em;
+  padding-top: 3rem;
   text-align:center;
   width: 193px;
   height: 128px;
@@ -228,7 +243,7 @@ hr {
   font-size: 20px;
   font-weight: var( --e-global-typography-primary-font-weight );
   color: #ffffff;
-  padding: 1em;
+  padding-top: 2.5rem;
   text-align: center;
   width: 193px;
   height: 128px;
@@ -244,7 +259,7 @@ hr {
   font-size: 20px;
   font-weight: var( --e-global-typography-primary-font-weight );
   color: #ffffff;
-  padding: 1em;
+  padding-top: 2.5rem;
   text-align: center;
   width: 193px;
   height: 128px;
@@ -260,7 +275,7 @@ hr {
   font-size: 20px;
   font-weight: var( --e-global-typography-primary-font-weight );
   color: #ffffff;
-  padding: 1em;
+  padding-top: 3rem;
   text-align: center;
   width: 193px;
   height: 128px;
@@ -283,17 +298,33 @@ label.commande:nth-child(7) > span:nth-child(1) > input:nth-child(1) {
   height: 56px;
 }
 
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(1) > p > label,
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(2) > p > label,
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(3) > p > label,
+#wpcf7-f772-p13-o1 > form > div.commande > div > div:nth-child(4) > p > label {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+#wpcf7-f772-p13-o1 > form > div.col-com {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .vertical-separator {
   border: none;
   border-left: 1px solid white;
   height: 370px;
 }
 
+.responsive-separator {
+  display: none;
+}
+
 .col1 > p:nth-child(2),
 .col2 > p:nth-child(2) {
   margin-bottom: 25px;
 }
-
 
 /* Labels */
 .col1 > p:nth-child(2) > label:nth-child(1),
@@ -302,7 +333,7 @@ label.commande:nth-child(7) > span:nth-child(1) > input:nth-child(1) {
 .col2 > p:nth-child(2) > label:nth-child(1),
 .col2 > p:nth-child(2) > label:nth-child(3),
 .col2 > p:nth-child(2) > label:nth-child(5) {
-  height: 71px;
+  height: 90px;
   width: 383px;
   line-height: 1.5;
 }
@@ -315,10 +346,10 @@ label.commande:nth-child(7) > span:nth-child(1) > input:nth-child(1) {
 #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(3) > span > span,
 .col2 > p:nth-child(2) > label:nth-child(5) > span:nth-child(1) > span:nth-child(2) {
   font-family: var( --e-global-typography-text-family ), Sans-serif;
-  font-size: var( --e-global-typography-text-font-size );
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--e-global-color-2b02dd7);
-  text-shadow: #000 1px 1px 5px;
+  text-shadow: #000000 1px 1px 5px;
 }
 
 /* Bouton envoyé */
@@ -332,18 +363,85 @@ label.commande:nth-child(7) > span:nth-child(1) > input:nth-child(1) {
   padding: 15px 60px;
 }
 
+#wpcf7-f772-p13-o1 > form > p > input {
+  margin-bottom: 0px;
+}
+
 /* Spinner masqué pour bon affichage du bouton 'Envoyer' */
 .wpcf7-spinner {
   display: none;
 }
 
-@media (max-width:806px) {
+/* Message d'erreur centré */
+#wpcf7-f772-p13-o1 > form > div.wpcf7-response-output {
+  text-align: center;
+}
 
-  .wpcf7-form {
+
+/* Responsive autour des formulaires */
+/* 1. Talette et ordinateur portable */
+@media screen and (max-width:847px) {
+
+  #wpcf7-f772-p13-o1 > form > div.col-com > hr.vertical-separator {
+    display: none; 
+  }
+
+  #wpcf7-f772-p13-o1 > form > div.col-com > hr.responsive-separator {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+   }
+
+  .col2 {
+    margin-top: 20px;
+  }
+}
+
+/* 2. Mobile */
+@media screen and (min-width:320px) and (max-width:425px) {
+
+  #wpcf7-f772-p13-o1 > form > div.commande > h2,
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col1 > h2,
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > h2 {
+    font-size: 25px;
+  }
+
+  body > div > div > div.elementor-element.elementor-element-a0a5ce1.e-con-full.e-flex.e-con.e-child {
+    min-height: 85px;
+  }
+
+  /* Formulaire de contact */
+  .wpcf7-form.init,
+  .wpcf7-form-control-wrap,
+  #wpcf7-f89-p11-o1 > div,
+  #wpcf7-f89-p11-o1 > form,
+  #wpcf7-f89-p11-o1 > form > p:nth-child(4) > label,
+  #wpcf7-f89-p11-o1 > form > p:nth-child(2) > label > span > input,
+  #wpcf7-f89-p11-o1 > form > p:nth-child(3) > label > span > input,
+  #wpcf7-f89-p11-o1 > form > p:nth-child(4) > label > span > textarea,
+  /* Formulaire de commande */
+  #wpcf7-f772-p13-o1 > form,
+  .col1,
+  .col2,
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col1 > p,
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p,
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col1 > p > label:nth-child(1),
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col1 > p > label:nth-child(3),
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col1 > p > label:nth-child(5),
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(1),
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(3),
+  #wpcf7-f772-p13-o1 > form > div.col-com > div.col2 > p > label:nth-child(5) {
+    width: 250px;
     margin: auto;
   }
 
-  .vertical-separator {
-    display: none;
-  }
+ #wpcf7-f772-p13-o1 > form > div.col-com > hr.vertical-separator {
+  display: none;
+ }
+
+ #wpcf7-f772-p13-o1 > form > div.col-com > hr.responsive-separator {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+ }
 }
